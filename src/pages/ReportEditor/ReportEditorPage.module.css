@@ -1,37 +1,182 @@
-.page { height: 100vh; display:flex; flex-direction:column; background:var(--color-background); }
-.loadingPage { min-height:100vh; display:grid; place-items:center; }
-.loadingCard { padding:24px; }
-.toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; border-bottom:1px solid var(--color-border); background:var(--color-surface); }
-.toolbarLeft, .toolbarActions { display:flex; align-items:center; gap:12px; }
-.toolbarSeparator { width:1px; height:24px; background:var(--color-border); }
-.reportTitle { margin:0; font-size:0.9375rem; font-weight:500; }
-.reportMeta { margin:2px 0 0; font-size:0.75rem; color:var(--color-text-muted); }
-.layout { display:flex; flex:1; min-height:0; }
-.sidebar { width:280px; border-right:1px solid var(--color-border); background:var(--color-surface); overflow:auto; }
-.sidebarInner { padding:20px 16px; }
-.sidebarHeader { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
-.sidebarTitle { margin:0; font-size:0.9375rem; font-weight:500; }
-.referenceCard { margin-bottom:16px; padding:10px 12px; border-radius:10px; background:rgba(38,38,38,0.04); border:1px solid rgba(38,38,38,0.12); }
-.referenceLabel { margin:0 0 2px; font-size:0.75rem; color:var(--color-text-muted); }
-.referenceName { margin:0; font-size:0.875rem; }
-.chapterNav { display:grid; gap:4px; }
-.chapterButton, .childButton { width:100%; text-align:left; border:0; background:transparent; border-radius:10px; padding:10px 12px; color:var(--color-text); }
-.childButton { padding-left:28px; color:var(--color-text-muted); }
-.chapterButton:hover, .childButton:hover, .chapterButtonActive { background:var(--color-surface-hover); }
-.editorArea { flex:1; min-width:0; overflow:auto; }
-.editorInner { padding:24px; max-width:960px; }
-.editorHeader { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:16px; }
-.editorEyebrow { margin:0 0 4px; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--color-text-muted); }
-.editorTitle { margin:0; font-size:1.5rem; font-weight:500; }
-.chapterProgress { padding:8px 12px; border:1px solid var(--color-border); border-radius:999px; font-size:0.875rem; color:var(--color-text-muted); }
-.editorTextarea { min-height: calc(100vh - 220px); background:var(--color-surface); }
-.versionList { display:grid; gap:10px; }
-.versionRow { padding:12px; border:1px solid var(--color-border); border-radius:12px; }
-.versionTitle { display:block; margin-bottom:4px; }
-.versionMeta { margin:0; color:var(--color-text-muted); font-size:0.875rem; }
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+}
+.loadingPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.loadingCard {
+  padding: 24px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.toolbarLeft,
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 112px;
+}
+.toolbarSeparator {
+  width: 1px;
+  height: 24px;
+  background: var(--color-border);
+}
+.reportTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.reportMeta {
+  margin: 2px 0 0;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.sidebar {
+  width: 280px;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow: auto;
+}
+.sidebarInner {
+  padding: 20px 16px;
+}
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.sidebarTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.referenceCard {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(38, 38, 38, 0.04);
+  border: 1px solid rgba(38, 38, 38, 0.12);
+}
+.referenceLabel {
+  margin: 0 0 2px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+.referenceName {
+  margin: 0;
+  font-size: 0.875rem;
+}
+.chapterNav {
+  display: grid;
+  gap: 4px;
+}
+.chapterButton,
+.childButton {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--color-text);
+}
+.childButton {
+  padding-left: 28px;
+  color: var(--color-text-muted);
+}
+.chapterButton:hover,
+.childButton:hover,
+.chapterButtonActive {
+  background: var(--color-surface-hover);
+}
+.editorArea {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+}
+.editorInner {
+  padding: 24px;
+  max-width: 960px;
+}
+.editorHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.editorEyebrow {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+.editorTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.chapterProgress {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+.editorTextarea {
+  min-height: calc(100vh - 220px);
+  background: var(--color-surface);
+}
+.versionList {
+  display: grid;
+  gap: 10px;
+}
+.versionRow {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+.versionTitle {
+  display: block;
+  margin-bottom: 4px;
+}
+.versionMeta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
 @media (max-width: 960px) {
-  .layout { flex-direction:column; }
-  .sidebar { width:100%; max-height:240px; }
-  .toolbar { flex-direction:column; align-items:flex-start; }
-  .toolbarActions { flex-wrap:wrap; }
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    max-height: 240px;
+  }
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .toolbarActions {
+    flex-wrap: wrap;
+  }
 }

@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
-import { LanguageSwitcher } from '@/components/common/LanguageSwitcher';
-import styles from './AppLayout.module.css';
+import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
+import { Outlet } from "react-router-dom";
+import styles from "./AppLayout.module.css";
 
 export function AppLayout() {
   return (

@@ -1,120 +1,26 @@
 {
-  "insurance": {
-    "defaultTitleKey": "templates.insurance.defaultTitle",
-    "currentChapterId": "executive-summary",
-    "versionNoteKey": "reports.initialDraftGenerated",
-    "requiredDocuments": [],
-    "chapters": [
-      { "id": "executive-summary", "titleKey": "chapters.executiveSummary", "contentKey": "generatedContent.executiveSummary" },
-      {
-        "id": "business-overview",
-        "titleKey": "chapters.businessOverview",
-        "children": [
-          { "id": "business-overview-1", "titleKey": "chapters.companyProfile", "contentKey": "generatedContent.companyProfile" },
-          { "id": "business-overview-2", "titleKey": "chapters.marketPosition", "contentKey": "generatedContent.marketPosition" },
-          { "id": "business-overview-3", "titleKey": "chapters.strategicObjectives", "contentKey": "generatedContent.strategicObjectives" }
-        ]
+  "Sanierungsplan für Finanzinstitute": {
+    "content": "",
+    "Inhaltsverzeichnis": {
+      "content": "\n1. Zusammenfassung der wichtigsten Bestandteile des Sanierungsplans\n2. Beschreibung der vom Sanierungsplan erfassten Unternehmen\n3. Unternehmensführung und Entscheidungsprozess\n4. Sanierungsplanindikatoren\n5. Handlungsoptionen und Maßnahmen\n6. Kommunikations- und Informationsplan\n",
+      "1. Zusammenfassung der wichtigsten Bestandteile des Sanierungsplans": {
+        "content": "\nGemäß Artikel 4 der Delegierten Verordnung (EU) Nr. 2016/1075 muss der Sanierungsplan mit einer zusammenfassenden Darstellung der Hauptpunkte beginnen. Diese umfasst alle wesentlichen Änderungen seit der letzten Einreichung des Plans und eine Gesamtdarstellung der Sanierungskapazität des Instituts.\n"
       },
-      {
-        "id": "risk-profile",
-        "titleKey": "chapters.riskProfile",
-        "children": [
-          { "id": "risk-profile-1", "titleKey": "chapters.riskManagementFramework", "contentKey": "generatedContent.riskManagementFramework" },
-          { "id": "risk-profile-2", "titleKey": "chapters.materialRisks", "contentKey": "generatedContent.materialRisks" },
-          { "id": "risk-profile-3", "titleKey": "chapters.riskMitigation", "contentKey": "generatedContent.riskMitigation" }
-        ]
+      "2. Beschreibung der vom Sanierungsplan erfassten Unternehmen": {
+        "content": "\nGemäß Artikel 7 der Delegierten Verordnung (EU) Nr. 2016/1075 und § 5 MaSanV ist eine detaillierte Beschreibung der Geschäfts- und Risikostrategie, des Geschäftsmodells und des Geschäftsplans der vom Sanierungsplan erfassten Unternehmen erforderlich. Diese beinhaltet eine Identifikation der wesentlichen Geschäftsbereiche und eine Bewertung ihrer strategischen Bedeutung.\n"
       },
-      {
-        "id": "governance",
-        "titleKey": "chapters.governanceSystem",
-        "children": [
-          { "id": "governance-1", "titleKey": "chapters.boardStructure", "contentKey": "generatedContent.boardStructure" },
-          { "id": "governance-2", "titleKey": "chapters.keyFunctions", "contentKey": "generatedContent.keyFunctions" },
-          { "id": "governance-3", "titleKey": "chapters.internalControls", "contentKey": "generatedContent.internalControls" }
-        ]
+      "3. Unternehmensführung und Entscheidungsprozess": {
+        "content": "\nDer Sanierungsplan muss gemäß Artikel 5 der Delegierten Verordnung (EU) Nr. 2016/1075 und § 6 MaSanV die Struktur der Unternehmensführung darlegen. Dies umfasst die Rolle und Funktion der für das Erstellen, Durchführen und Aktualisieren der einzelnen Abschnitte des Plans zuständigen Personen sowie die Integration der Inhalte in die Risikomanagementprozesse des Instituts.\n"
       },
-      {
-        "id": "financial-statements",
-        "titleKey": "chapters.financialStatements",
-        "children": [
-          { "id": "financial-statements-1", "titleKey": "chapters.balanceSheet", "contentKey": "generatedContent.balanceSheet" },
-          { "id": "financial-statements-2", "titleKey": "chapters.incomeStatement", "contentKey": "generatedContent.incomeStatement" },
-          { "id": "financial-statements-3", "titleKey": "chapters.cashFlow", "contentKey": "generatedContent.cashFlow" }
-        ]
+      "4. Sanierungsplanindikatoren": {
+        "content": "\nDie Indikatoren, die zur Bewertung der finanziellen Stabilität des Instituts eingesetzt werden, sind gemäß den Leitlinien zu Sanierungsplanindikatoren und Artikel 5 Absatz 3 Buchstabe b der Delegierten Verordnung (EU) Nr. 2016/1075 festzulegen. Obligatorische Kategorien von Indikatoren umfassen Kapital-, Liquiditäts-, Rentabilitäts- und Vermögensqualitätsindikatoren. Optionen für marktbasierte und makroökonomische Indikatoren können ebenfalls berücksichtigt werden, falls relevant.\n"
       },
-      {
-        "id": "capital-management",
-        "titleKey": "chapters.capitalManagement",
-        "children": [
-          { "id": "capital-management-1", "titleKey": "chapters.capitalRequirements", "contentKey": "generatedContent.capitalRequirements" },
-          { "id": "capital-management-2", "titleKey": "chapters.capitalResources", "contentKey": "generatedContent.capitalResources" },
-          { "id": "capital-management-3", "titleKey": "chapters.capitalProjections", "contentKey": "generatedContent.capitalProjections" }
-        ]
+      "5. Handlungsoptionen und Maßnahmen": {
+        "content": "\nDer Sanierungsplan muss gemäß Artikel 10 der Delegierten Verordnung (EU) Nr. 2016/1075 eine detaillierte Beschreibung der Handlungsoptionen enthalten, die zur Sicherstellung der finanziellen Stabilität ergriffen werden können. Dies umfasst eine Auswirkungsanalyse der operativen und externen Folgen dieser Maßnahmen auf die Solvenz, Liquidität und Finanzierungspositionen des Instituts sowie auf die Fortführungsfähigkeit kritischer Geschäftsprozesse.\n"
+      },
+      "6. Kommunikations- und Informationsplan": {
+        "content": "\nGemäß Artikel 10 der Delegierten Verordnung (EU) Nr. 2016/1075 ist ein Kommunikationsplan zu erstellen, der aufzeigt, wie das Institut mit etwaigen negativen Marktreaktionen umgehen wird. Dieser Abschnitt enthält auch einen Plan für interne und externe Kommunikation, um Transparenz während der Umsetzung des Sanierungsplans zu gewährleisten. \n\n**Keine ausreichenden Quellinformationen verfügbar.**\n\nBitte beachten Sie, dass dies ein Standardformat für einen Sanierungsplan ist und spezifische institutionelle Anpassungen je nach den Anforderungen des jeweiligen Instituts erforderlich sein können."
       }
-    ]
-  },
-  "bank": {
-    "defaultTitleKey": "templates.bank.defaultTitle",
-    "currentChapterId": "executive-summary",
-    "versionNoteKey": "reports.initialDraftGenerated",
-    "requiredDocuments": [
-      "templates.bank.required.executiveSummary",
-      "templates.bank.required.riskManagementFramework",
-      "templates.bank.required.capitalAdequacyReport",
-      "templates.bank.required.liquidityCoverageRatio",
-      "templates.bank.required.creditRiskAssessment",
-      "templates.bank.required.marketRiskAnalysis",
-      "templates.bank.required.operationalRiskReport",
-      "templates.bank.required.complianceGovernance",
-      "templates.bank.required.financialStatements"
-    ],
-    "chapters": [
-      { "id": "executive-summary", "titleKey": "chapters.executiveSummary", "contentKey": "generatedContent.executiveSummary" },
-      {
-        "id": "business-overview",
-        "titleKey": "chapters.businessOverview",
-        "children": [
-          { "id": "business-overview-1", "titleKey": "chapters.companyProfile", "contentKey": "generatedContent.companyProfile" },
-          { "id": "business-overview-2", "titleKey": "chapters.marketPosition", "contentKey": "generatedContent.marketPosition" },
-          { "id": "business-overview-3", "titleKey": "chapters.strategicObjectives", "contentKey": "generatedContent.strategicObjectives" }
-        ]
-      },
-      {
-        "id": "risk-profile",
-        "titleKey": "chapters.riskProfile",
-        "children": [
-          { "id": "risk-profile-1", "titleKey": "chapters.riskManagementFramework", "contentKey": "generatedContent.riskManagementFramework" },
-          { "id": "risk-profile-2", "titleKey": "chapters.materialRisks", "contentKey": "generatedContent.materialRisks" },
-          { "id": "risk-profile-3", "titleKey": "chapters.riskMitigation", "contentKey": "generatedContent.riskMitigation" }
-        ]
-      },
-      {
-        "id": "governance",
-        "titleKey": "chapters.governanceSystem",
-        "children": [
-          { "id": "governance-1", "titleKey": "chapters.boardStructure", "contentKey": "generatedContent.boardStructure" },
-          { "id": "governance-2", "titleKey": "chapters.keyFunctions", "contentKey": "generatedContent.keyFunctions" },
-          { "id": "governance-3", "titleKey": "chapters.internalControls", "contentKey": "generatedContent.internalControls" }
-        ]
-      },
-      {
-        "id": "financial-statements",
-        "titleKey": "chapters.financialStatements",
-        "children": [
-          { "id": "financial-statements-1", "titleKey": "chapters.balanceSheet", "contentKey": "generatedContent.balanceSheet" },
-          { "id": "financial-statements-2", "titleKey": "chapters.incomeStatement", "contentKey": "generatedContent.incomeStatement" },
-          { "id": "financial-statements-3", "titleKey": "chapters.cashFlow", "contentKey": "generatedContent.cashFlow" }
-        ]
-      },
-      {
-        "id": "capital-management",
-        "titleKey": "chapters.capitalManagement",
-        "children": [
-          { "id": "capital-management-1", "titleKey": "chapters.capitalRequirements", "contentKey": "generatedContent.capitalRequirements" },
-          { "id": "capital-management-2", "titleKey": "chapters.capitalResources", "contentKey": "generatedContent.capitalResources" },
-          { "id": "capital-management-3", "titleKey": "chapters.capitalProjections", "contentKey": "generatedContent.capitalProjections" }
-        ]
-      }
-    ]
+    }
   }
 }
