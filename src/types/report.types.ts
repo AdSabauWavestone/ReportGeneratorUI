@@ -22,8 +22,8 @@ export interface ReportVersion {
   note?: string;
 }
 
-export type ReportStatus = 'draft' | 'in-progress' | 'completed';
-export type ReportType = 'insurance' | 'bank';
+export type ReportStatus = "draft" | "in-progress" | "completed";
+export type ReportType = "insurance" | "bank";
 
 export interface Report {
   id: string;
@@ -41,7 +41,9 @@ export interface Report {
 
 export interface Chapter {
   id: string;
-  titleKey: string;
+  title: string;
+  titleKey?: string;
+  content?: string;
   contentKey?: string;
   children?: Chapter[];
 }

@@ -8,7 +8,7 @@ import { pushSuccess } from "@/services/http/apiMessages";
 import type { Chapter, Report } from "@/types/report.types";
 import { getReportStructure } from "@/utils/reportTemplates";
 import { storage } from "@/utils/storage";
-import { useEffect, useMemo, useState } from "react";
+import { type ReactElement, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./ReportEditorPage.module.css";
@@ -31,12 +31,52 @@ function collectChapterIds(chapters: Chapter[]): string[] {
   ]);
 }
 
+function renderChapterTree(
+  chapters: Chapter[],
+  selectedChapter: string,
+  setSelectedChapter: (chapterId: string) => void,
+  t: ReturnType<typeof useTranslation>["t"],
+  stylesMap: Record<string, string>,
+  depth = 0,
+): ReactElement[] {
+  return chapters.flatMap((chapter) => {
+    const baseClass =
+      depth === 0 ? stylesMap.chapterButton : stylesMap.childButton;
+    const className =
+      selectedChapter === chapter.id
+        ? `${baseClass} ${stylesMap.chapterButtonActive}`
+        : baseClass;
+
+    return [
+      <div key={chapter.id}>
+        <button
+          type="button"
+          className={className}
+          onClick={() => setSelectedChapter(chapter.id)}
+        >
+          {chapter.titleKey ? t(chapter.titleKey) : chapter.title}
+        </button>
+        {chapter.children?.length
+          ? renderChapterTree(
+              chapter.children,
+              selectedChapter,
+              setSelectedChapter,
+              t,
+              stylesMap,
+              depth + 1,
+            )
+          : null}
+      </div>,
+    ];
+  });
+}
+
 export function ReportEditorPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { id } = useParams();
   const [report, setReport] = useState<Report | null>(null);
-  const [selectedChapter, setSelectedChapter] = useState("executive-summary");
+  const [selectedChapter, setSelectedChapter] = useState("");
   const [draftText, setDraftText] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [showVersions, setShowVersions] = useState(false);
@@ -55,7 +95,8 @@ export function ReportEditorPage() {
     const loadedReport = storage.getReport(id);
     if (!loadedReport) return;
     setReport(loadedReport);
-    const currentChapter = loadedReport.currentChapter || "executive-summary";
+    const currentChapter =
+      loadedReport.currentChapter || reportStructure[0]?.id || "";
     setSelectedChapter(currentChapter);
     setDraftText(loadedReport.content[currentChapter]?.text ?? "");
   }, [id]);
@@ -67,7 +108,8 @@ export function ReportEditorPage() {
 
   const currentTitle = useMemo(() => {
     const chapter = findChapter(reportStructure, selectedChapter);
-    return chapter ? t(chapter.titleKey) : "";
+    if (!chapter) return "";
+    return chapter.titleKey ? t(chapter.titleKey) : chapter.title;
   }, [reportStructure, selectedChapter, t]);
 
   const updateCurrentChapter = () => {
@@ -187,35 +229,13 @@ export function ReportEditorPage() {
               </div>
             ) : null}
             <nav className={styles.chapterNav}>
-              {reportStructure.map((chapter) => (
-                <div key={chapter.id}>
-                  <button
-                    type="button"
-                    className={
-                      selectedChapter === chapter.id
-                        ? `${styles.chapterButton} ${styles.chapterButtonActive}`
-                        : styles.chapterButton
-                    }
-                    onClick={() => setSelectedChapter(chapter.id)}
-                  >
-                    {t(chapter.titleKey)}
-                  </button>
-                  {chapter.children?.map((child) => (
-                    <button
-                      key={child.id}
-                      type="button"
-                      className={
-                        selectedChapter === child.id
-                          ? `${styles.childButton} ${styles.chapterButtonActive}`
-                          : styles.childButton
-                      }
-                      onClick={() => setSelectedChapter(child.id)}
-                    >
-                      {t(child.titleKey)}
-                    </button>
-                  ))}
-                </div>
-              ))}
+              {renderChapterTree(
+                reportStructure,
+                selectedChapter,
+                setSelectedChapter,
+                t,
+                styles,
+              )}
             </nav>
           </div>
         </aside>
