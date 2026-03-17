@@ -1,0 +1,4 @@
+.page { min-height:100vh; display:grid; place-items:center; padding:24px; }
+.content { min-width:min(480px, 100%); text-align:center; padding:40px 24px; }
+.title { margin-bottom:8px; }
+.text { margin-bottom:20px; color:var(--color-text-muted); }

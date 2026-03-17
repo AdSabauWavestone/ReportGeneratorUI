@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  gap: 12px;
+}
+.option {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 14px;
+  padding: 16px;
+}
+.option:hover {
+  background: var(--color-surface-hover);
+}
+.optionIcon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--color-secondary);
+}
+.optionTitle {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.optionText {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.option:disabled { opacity: 0.6; cursor: not-allowed; }
+.option:disabled:hover { background: var(--color-surface); }

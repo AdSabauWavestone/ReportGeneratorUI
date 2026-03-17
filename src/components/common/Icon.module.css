@@ -1,0 +1,11 @@
+.icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.fill {
+  font-variation-settings: 'FILL' 1;
+}

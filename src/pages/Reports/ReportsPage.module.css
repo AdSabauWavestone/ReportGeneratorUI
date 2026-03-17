@@ -1,0 +1,24 @@
+.page { min-height: 100vh; background: var(--color-background); }
+.header { border-bottom: 1px solid var(--color-border); background: var(--color-surface); }
+.container { width: min(calc(100% - 48px), var(--container-max)); margin: 0 auto; }
+.headerRow { display:flex; align-items:center; gap:16px; padding:24px 0; }
+.title { margin:0; font-size:1.5rem; font-weight:500; }
+.subtitle { margin:4px 0 0; font-size:0.875rem; color:var(--color-text-muted); }
+.contentWrap { padding:32px 0; }
+.emptyState { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:64px 24px; }
+.emptyIcon { font-size:4rem; color:var(--color-text-muted); margin-bottom:16px; }
+.emptyTitle { margin-bottom:8px; }
+.emptyText { margin-bottom:24px; color:var(--color-text-muted); font-size:0.875rem; }
+.list { display:grid; gap:16px; }
+.cardTop { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+.cardTopLeft { display:flex; align-items:center; gap:12px; }
+.fileIconWrap { display:flex; width:48px; height:48px; align-items:center; justify-content:center; border-radius:12px; background: var(--color-secondary); }
+.fileIcon { color: var(--color-text-muted); }
+.cardBottom { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.meta { display:flex; flex-wrap:wrap; gap:24px; color:var(--color-text-muted); font-size:0.875rem; }
+.actions { display:flex; gap:8px; }
+.dialogText { margin:0 0 20px; color:var(--color-text-muted); }
+.dialogActions { display:flex; justify-content:flex-end; gap:12px; }
+@media (max-width: 900px) {
+  .cardTop, .cardBottom, .headerRow { flex-direction:column; align-items:flex-start; }
+}

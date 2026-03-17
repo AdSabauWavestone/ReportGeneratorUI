@@ -1,0 +1,22 @@
+.page { min-height:100vh; background:var(--color-background); }
+.header { border-bottom:1px solid var(--color-border); background:var(--color-surface); }
+.container { width:min(calc(100% - 48px), 960px); margin:0 auto; }
+.headerRow { display:flex; align-items:center; gap:16px; padding:16px 0; }
+.separator { width:1px; height:24px; background:var(--color-border); }
+.title { margin:0; font-size:1.25rem; font-weight:500; }
+.subtitle { margin:4px 0 0; font-size:0.875rem; color:var(--color-text-muted); }
+.stack { display:grid; gap:24px; padding:32px 0; }
+.uploaderCardContent { display:grid; gap:16px; }
+.uploadBox { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:200px; border:2px dashed var(--color-border); border-radius:14px; background:rgba(245,245,245,0.4); padding:24px; }
+.hiddenInput { display:none; }
+.uploadIcon { font-size:2.5rem; color:var(--color-text-muted); margin-bottom:16px; }
+.uploadText { margin:0 0 8px; }
+.uploadSubtext { margin:0; color:var(--color-text-muted); font-size:0.75rem; }
+.fileList { display:grid; gap:8px; }
+.fileRow { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px; border:1px solid var(--color-border); border-radius:12px; background:var(--color-surface); }
+.fileRowLeft { display:flex; align-items:center; gap:12px; }
+.fileIconWrap { width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:var(--color-secondary); }
+.fileName { margin:0; font-size:0.9375rem; }
+.fileMeta { margin:4px 0 0; font-size:0.75rem; color:var(--color-text-muted); }
+.footerActions { display:flex; justify-content:flex-end; gap:12px; }
+@media (max-width: 720px) { .headerRow { flex-direction:column; align-items:flex-start; } .separator { display:none; } }

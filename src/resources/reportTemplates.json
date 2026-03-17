@@ -1,0 +1,120 @@
+{
+  "insurance": {
+    "defaultTitleKey": "templates.insurance.defaultTitle",
+    "currentChapterId": "executive-summary",
+    "versionNoteKey": "reports.initialDraftGenerated",
+    "requiredDocuments": [],
+    "chapters": [
+      { "id": "executive-summary", "titleKey": "chapters.executiveSummary", "contentKey": "generatedContent.executiveSummary" },
+      {
+        "id": "business-overview",
+        "titleKey": "chapters.businessOverview",
+        "children": [
+          { "id": "business-overview-1", "titleKey": "chapters.companyProfile", "contentKey": "generatedContent.companyProfile" },
+          { "id": "business-overview-2", "titleKey": "chapters.marketPosition", "contentKey": "generatedContent.marketPosition" },
+          { "id": "business-overview-3", "titleKey": "chapters.strategicObjectives", "contentKey": "generatedContent.strategicObjectives" }
+        ]
+      },
+      {
+        "id": "risk-profile",
+        "titleKey": "chapters.riskProfile",
+        "children": [
+          { "id": "risk-profile-1", "titleKey": "chapters.riskManagementFramework", "contentKey": "generatedContent.riskManagementFramework" },
+          { "id": "risk-profile-2", "titleKey": "chapters.materialRisks", "contentKey": "generatedContent.materialRisks" },
+          { "id": "risk-profile-3", "titleKey": "chapters.riskMitigation", "contentKey": "generatedContent.riskMitigation" }
+        ]
+      },
+      {
+        "id": "governance",
+        "titleKey": "chapters.governanceSystem",
+        "children": [
+          { "id": "governance-1", "titleKey": "chapters.boardStructure", "contentKey": "generatedContent.boardStructure" },
+          { "id": "governance-2", "titleKey": "chapters.keyFunctions", "contentKey": "generatedContent.keyFunctions" },
+          { "id": "governance-3", "titleKey": "chapters.internalControls", "contentKey": "generatedContent.internalControls" }
+        ]
+      },
+      {
+        "id": "financial-statements",
+        "titleKey": "chapters.financialStatements",
+        "children": [
+          { "id": "financial-statements-1", "titleKey": "chapters.balanceSheet", "contentKey": "generatedContent.balanceSheet" },
+          { "id": "financial-statements-2", "titleKey": "chapters.incomeStatement", "contentKey": "generatedContent.incomeStatement" },
+          { "id": "financial-statements-3", "titleKey": "chapters.cashFlow", "contentKey": "generatedContent.cashFlow" }
+        ]
+      },
+      {
+        "id": "capital-management",
+        "titleKey": "chapters.capitalManagement",
+        "children": [
+          { "id": "capital-management-1", "titleKey": "chapters.capitalRequirements", "contentKey": "generatedContent.capitalRequirements" },
+          { "id": "capital-management-2", "titleKey": "chapters.capitalResources", "contentKey": "generatedContent.capitalResources" },
+          { "id": "capital-management-3", "titleKey": "chapters.capitalProjections", "contentKey": "generatedContent.capitalProjections" }
+        ]
+      }
+    ]
+  },
+  "bank": {
+    "defaultTitleKey": "templates.bank.defaultTitle",
+    "currentChapterId": "executive-summary",
+    "versionNoteKey": "reports.initialDraftGenerated",
+    "requiredDocuments": [
+      "templates.bank.required.executiveSummary",
+      "templates.bank.required.riskManagementFramework",
+      "templates.bank.required.capitalAdequacyReport",
+      "templates.bank.required.liquidityCoverageRatio",
+      "templates.bank.required.creditRiskAssessment",
+      "templates.bank.required.marketRiskAnalysis",
+      "templates.bank.required.operationalRiskReport",
+      "templates.bank.required.complianceGovernance",
+      "templates.bank.required.financialStatements"
+    ],
+    "chapters": [
+      { "id": "executive-summary", "titleKey": "chapters.executiveSummary", "contentKey": "generatedContent.executiveSummary" },
+      {
+        "id": "business-overview",
+        "titleKey": "chapters.businessOverview",
+        "children": [
+          { "id": "business-overview-1", "titleKey": "chapters.companyProfile", "contentKey": "generatedContent.companyProfile" },
+          { "id": "business-overview-2", "titleKey": "chapters.marketPosition", "contentKey": "generatedContent.marketPosition" },
+          { "id": "business-overview-3", "titleKey": "chapters.strategicObjectives", "contentKey": "generatedContent.strategicObjectives" }
+        ]
+      },
+      {
+        "id": "risk-profile",
+        "titleKey": "chapters.riskProfile",
+        "children": [
+          { "id": "risk-profile-1", "titleKey": "chapters.riskManagementFramework", "contentKey": "generatedContent.riskManagementFramework" },
+          { "id": "risk-profile-2", "titleKey": "chapters.materialRisks", "contentKey": "generatedContent.materialRisks" },
+          { "id": "risk-profile-3", "titleKey": "chapters.riskMitigation", "contentKey": "generatedContent.riskMitigation" }
+        ]
+      },
+      {
+        "id": "governance",
+        "titleKey": "chapters.governanceSystem",
+        "children": [
+          { "id": "governance-1", "titleKey": "chapters.boardStructure", "contentKey": "generatedContent.boardStructure" },
+          { "id": "governance-2", "titleKey": "chapters.keyFunctions", "contentKey": "generatedContent.keyFunctions" },
+          { "id": "governance-3", "titleKey": "chapters.internalControls", "contentKey": "generatedContent.internalControls" }
+        ]
+      },
+      {
+        "id": "financial-statements",
+        "titleKey": "chapters.financialStatements",
+        "children": [
+          { "id": "financial-statements-1", "titleKey": "chapters.balanceSheet", "contentKey": "generatedContent.balanceSheet" },
+          { "id": "financial-statements-2", "titleKey": "chapters.incomeStatement", "contentKey": "generatedContent.incomeStatement" },
+          { "id": "financial-statements-3", "titleKey": "chapters.cashFlow", "contentKey": "generatedContent.cashFlow" }
+        ]
+      },
+      {
+        "id": "capital-management",
+        "titleKey": "chapters.capitalManagement",
+        "children": [
+          { "id": "capital-management-1", "titleKey": "chapters.capitalRequirements", "contentKey": "generatedContent.capitalRequirements" },
+          { "id": "capital-management-2", "titleKey": "chapters.capitalResources", "contentKey": "generatedContent.capitalResources" },
+          { "id": "capital-management-3", "titleKey": "chapters.capitalProjections", "contentKey": "generatedContent.capitalProjections" }
+        ]
+      }
+    ]
+  }
+}

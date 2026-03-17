@@ -1,0 +1,60 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.container {
+  width: min(calc(100% - 48px), var(--container-max));
+  margin: 0 auto;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+}
+.title { margin: 0; font-size: 1.5rem; font-weight: 500; }
+.subtitle { margin: 4px 0 0; color: var(--color-text-muted); font-size: 0.875rem; }
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 32px 0;
+}
+.statHeader { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.statTitle { font-size: 0.875rem; }
+.statIcon { color: var(--color-text-muted); }
+.statValue { font-size: 1.875rem; line-height:1.2; }
+.sectionHeader { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.emptyState { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 48px 24px; }
+.emptyIcon { font-size: 3rem; color: var(--color-text-muted); margin-bottom: 16px; }
+.emptyTitle { margin-bottom: 8px; }
+.emptyText { margin-bottom: 24px; color: var(--color-text-muted); font-size: 0.875rem; }
+.reportList { display:grid; gap:16px; }
+.reportRow {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:16px;
+  border-radius: 12px;
+  border:1px solid var(--color-border);
+  transition: background-color 160ms ease;
+}
+.reportRow:hover { background: var(--color-surface-hover); }
+.reportRowLeft { display:flex; align-items:center; gap:16px; min-width:0; }
+.fileIconWrap { display:flex; width:40px; height:40px; align-items:center; justify-content:center; border-radius:12px; background: var(--color-secondary); }
+.fileIcon { color: var(--color-text-muted); }
+.reportMetaRow { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.reportTitle { margin:0; font-size: 0.9375rem; font-weight:500; }
+.reportSubtext { margin:4px 0 0; font-size: 0.75rem; color: var(--color-text-muted); }
+.reportAside { font-size: 0.75rem; color: var(--color-text-muted); white-space: nowrap; }
+@media (max-width: 900px) {
+  .statsGrid { grid-template-columns: 1fr; }
+  .headerRow, .sectionHeader, .reportRow { align-items:flex-start; flex-direction:column; }
+  .reportAside { white-space:normal; }
+}
